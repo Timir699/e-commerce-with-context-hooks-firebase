@@ -1,9 +1,12 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
 const Shipping = () => {
     return (
         <div>
-            Shipping
+            <Container>
+                Shipping
+            </Container>
         </div>
     );
 };

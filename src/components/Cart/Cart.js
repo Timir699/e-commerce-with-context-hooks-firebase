@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Button, Row } from 'react-bootstrap';
 import useCartProducts from '../../hooks/useCartProducts';
 import './Cart.css'
+import { IoBagCheckOutline } from 'react-icons/io5';
+import { MdRemoveShoppingCart } from 'react-icons/md';
 
 const Cart = () => {
 
@@ -24,8 +26,8 @@ const Cart = () => {
                                     <img className={{ width: "250px" }} src={cartProduct.img} alt="" />
                                     <h3>{cartProduct.name}</h3>
                                     <h3>price-${cartProduct.price}</h3>
-                                    <Button variant="warning">Checkout</Button>
-                                    <Button onClick={() => removeItem(cartProduct)} variant="warning">Remove From Cart</Button>
+                                    <Button className="mx-1" variant="warning"><IoBagCheckOutline className="mb-1" /> Checkout</Button>
+                                    <Button onClick={() => removeItem(cartProduct)} variant="warning"><MdRemoveShoppingCart className="mb-1" />Remove From Cart</Button>
                                 </div>
                             )
                         })}

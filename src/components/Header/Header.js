@@ -18,7 +18,7 @@ const Header = () => {
                             <Nav.Link as={Link} className="mr-3" to="/login">Log in</Nav.Link>
                             <Nav.Link as={Link} className="mr-3" to="/logout">Log out</Nav.Link>
                             <Navbar.Text >
-                                Signed in as: <a href="#login">Mark Otto</a>
+                                Signed in as: <a href="#login">User Name</a>
                             </Navbar.Text>
                         </Nav>
                     </Navbar.Collapse>

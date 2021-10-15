@@ -3,6 +3,8 @@ import { Row, Button, Container, InputGroup, FormControl } from 'react-bootstrap
 import useCartProducts from '../../hooks/useCartProducts';
 import useProducts from '../../hooks/useProduct';
 import './Products.css'
+import { CgDetailsMore } from 'react-icons/cg';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Products = () => {
 
@@ -59,8 +61,8 @@ const Products = () => {
                                     <h3>{product.name}</h3>
                                     <h3>${product.price}</h3>
                                     <h3>{product.weight}gm</h3>
-                                    <Button onClick={ProductDetailsHandler} variant="warning">Details</Button>{' '}
-                                    <Button onClick={() => ProductAddToCart(product)} variant="warning">Add to cart</Button>{' '}
+                                    <Button onClick={ProductDetailsHandler} variant="warning"><CgDetailsMore className="mb-1" /> Details</Button>{' '}
+                                    <Button onClick={() => ProductAddToCart(product)} variant="warning"><AiOutlineShoppingCart className="mb-1" /> Add to cart</Button>{' '}
                                 </div>
                             )
                         })
