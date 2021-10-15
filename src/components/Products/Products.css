@@ -1,0 +1,8 @@
+.product img {
+    width: 250px;
+    height: auto;
+}
+.form-control:focus {
+    border-color: none;
+    box-shadow: none;
+}

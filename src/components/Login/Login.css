@@ -1,0 +1,15 @@
+.form-control {
+    width: 50%;
+    margin: auto;
+}
+.form-check-input:checked {
+    background-color: #ffc107;
+    border-color: #ffffff;
+}
+.form-check .form-check-input {
+    float: none;
+    margin-right: .5em;
+}
+.form-check-input:focus {
+    box-shadow: none;
+}
