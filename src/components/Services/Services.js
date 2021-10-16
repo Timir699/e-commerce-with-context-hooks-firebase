@@ -12,7 +12,7 @@ const Services = () => {
 
     const AllServices = useServices()
     const cartProducts = useCartProducts()
-    const { allCartProducts, setAllCartProducts, setTotalPrice } = cartProducts
+    const { allCartProducts, setAllCartProducts } = cartProducts
 
     const ServiceDetailsHandler = () => {
         console.log('Service details');
@@ -20,9 +20,6 @@ const Services = () => {
 
     const ServiceAddToCart = (service) => {
         setAllCartProducts([...allCartProducts, service])
-        let servicePrice = service.price
-        const totalServicePrice = servicePrice += servicePrice
-        setTotalPrice(totalServicePrice)
         alert("Service Successfully added to cart")
     }
 
@@ -60,6 +57,7 @@ const Services = () => {
                             </div>
                         )
                     })}
+                    <h2 className="text-center my-5">{displayServices.length === 0 ? "Your desired Service Found" : ""}</h2>
                 </Row>
             </Container>
         </div>

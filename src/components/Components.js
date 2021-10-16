@@ -4,11 +4,11 @@ import Services from './Services/Services';
 import Cart from './Cart/Cart';
 import Header from './Header/Header';
 import Login from './Login/Login'
-import LogOut from './LogOut/LogOut'
 import Shipping from './Shipping/Shipping'
 import NotFound from './NotFound/NotFound'
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 
 const Components = () => {
@@ -23,17 +23,14 @@ const Components = () => {
                     <Route path="/Services">
                         <Services />
                     </Route>
-                    <Route path="/Cart">
+                    <PrivateRoute path="/Cart">
                         <Cart />
-                    </Route>
-                    <Route path="/Shipping">
+                    </PrivateRoute>
+                    <PrivateRoute path="/Shipping">
                         <Shipping />
-                    </Route>
+                    </PrivateRoute>
                     <Route path="/Login">
                         <Login />
-                    </Route>
-                    <Route path="/LogOut">
-                        <LogOut />
                     </Route>
                     <Route path="*">
                         <NotFound />

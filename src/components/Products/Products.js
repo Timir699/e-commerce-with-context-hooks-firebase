@@ -13,7 +13,7 @@ const Products = () => {
     const AllProducts = useProducts()
 
     const cartProducts = useCartProducts()
-    const { allCartProducts, setAllCartProducts, setTotalPrice, totalPrice } = cartProducts
+    const { allCartProducts, setAllCartProducts } = cartProducts
 
     const ProductDetailsHandler = () => {
         console.log('details');
@@ -21,9 +21,6 @@ const Products = () => {
 
     const ProductAddToCart = (product) => {
         setAllCartProducts([...allCartProducts, product])
-        let productPrice = product.price
-        let totalProductPrice = productPrice
-        setTotalPrice(totalProductPrice)
         alert("Product Successfully added to cart")
     }
 
@@ -35,7 +32,6 @@ const Products = () => {
         const productSearchText = e.target.value
         const matchedProducts = AllProducts?.filter(product => product.name.toLowerCase().includes(productSearchText.toLowerCase()))
         setDisplayProducts(matchedProducts)
-
     }
 
     return (
@@ -67,6 +63,7 @@ const Products = () => {
                             )
                         })
                     }
+                    <h2 className="text-center my-5">{displayProducts.length === 0 ? "Your desired Product Not Found" : ""}</h2>
                 </Row>
             </Container>
         </div>
